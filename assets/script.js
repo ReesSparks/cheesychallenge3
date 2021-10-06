@@ -1,4 +1,12 @@
 // Assignment code here
+const characters = {
+  uppercase: 'ABCEFGHIJKLMNOPQRSTUVWXYZ',
+  lowercase: 'abcdefghijklmnopqrstuvwxyz',
+  specialChar: '!@#$%^^&*()',
+  numbers: '1234567890'
+}
+
+
 function generatePassword() {
   var length = window.prompt("how many characters?")
   
@@ -6,8 +14,8 @@ function generatePassword() {
   var specialChar = window.confirm("special characters? ")
   var lowercase = window.confirm("lowercase letters?")
   var numbers = window.confirm("include numbers?")
-  
 
+  return "your password"
 }
 
 
