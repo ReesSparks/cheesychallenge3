@@ -5,17 +5,40 @@ const characters = {
   specialChar: '!@#$%^^&*()',
   numbers: '1234567890'
 }
-
+var result = "";
+var password = "";
 
 function generatePassword() {
   var length = window.prompt("how many characters?")
-  
-  var uppercase = window.confirm("do you want capital letters?")
-  var specialChar = window.confirm("special characters? ")
-  var lowercase = window.confirm("lowercase letters?")
-  var numbers = window.confirm("include numbers?")
+  if (length < 8 || length > 128){
+    window.alert("must choose length between 8 and 128 characters")
+    return ""
+  }
 
-  return "your password"
+  var uppercase = window.confirm("do you want capital letters?")
+  
+  if (uppercase){
+    result += characters.uppercase
+  }
+
+  var specialChar = window.confirm("special characters? ")
+  
+  if (specialChar){
+    result += characters.specialChar
+  }
+  
+  var lowercase = window.confirm("lowercase letters?")
+  if (lowercase){
+    result += characters.lowercase
+  }
+  
+  
+  var numbers = window.confirm("include numbers?")
+  if (numbers){
+    result += characters.numbers
+  }
+
+  return password
 }
 
 
